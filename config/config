@@ -1,0 +1,9 @@
+{
+    "conexion":{
+        "dsn" : "mysql",
+        "host" : "localhost",
+        "database" : "ws_cursos",
+        "user" : "root",
+        "password" : ""
+    }
+}
