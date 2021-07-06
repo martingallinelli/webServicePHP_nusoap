@@ -12,7 +12,12 @@ class Conection
     // constructor
     public function __construct() {}
 
-    //! abrir conexion a la BD
+    //! abrir conexion a la BD    
+    /**
+     * conectar
+     *
+     * @return object
+     */
     static function conectar() 
     {
         // guardar los datos de la conexion

@@ -45,8 +45,6 @@ $server->register(
 //! funcion listar cursos
 function listarCursos()
 {
-    // nuevo objeto respuesta
-    $respuestas = new Answers;
     //! conectar la bd
     $conn = Conection::conectar();
     //! consulta sql
@@ -58,8 +56,8 @@ function listarCursos()
         // traer el curso en un array asociativo
         $cursos = $stmt->fetchAll(PDO::FETCH_ASSOC);
     } else {
-        // error interno del servidor
-        return $respuestas->error_500();
+        // error 500 interno del servidor
+        return Answers::mensaje('500', 'Error interno del servidor');
     }
 
     //! crear estructura xml y devolverla
@@ -69,8 +67,6 @@ function listarCursos()
 //! funcion listar curso por id
 function getCurso($id)
 {
-    // nuevo objeto respuesta
-    $respuestas = new Answers;
     //! conectar la bd
     $conn = Conection::conectar();
     //! consulta sql
@@ -84,8 +80,8 @@ function getCurso($id)
         // traer el curso en un array asociativo
         $cursos = $stmt->fetchAll(PDO::FETCH_ASSOC);
     } else {
-        // error interno del servidor
-        return $respuestas->error_500();
+        // error 500 interno del servidor
+        return Answers::mensaje('500', 'Error interno del servidor');
     }
 
     //! crear estructura xml y devolverla
